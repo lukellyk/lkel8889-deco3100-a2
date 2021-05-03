@@ -1,13 +1,13 @@
-const dataSource = "../data/gulf-war-data-indexed.csv"
+const dataSourceA = "../data/afghanistan-war-data-indexed.csv"
 
-function loadDataG() {
-    Plotly.d3.csv(dataSource, function (data) {
+function loadDataA() {
+    Plotly.d3.csv(dataSourceA, function (data) {
         console.log(data);
-      processDataG(data);
+      processDataA(data);
     });
   }
 
-function processDataG(allRows) {
+function processDataA(allRows) {
     let x = [], cmr = [], hdi = [], pcmr = [], phdi = [];
     for (let i = 0; i < allRows.length; i++) {
         let row = allRows[i];
@@ -17,10 +17,10 @@ function processDataG(allRows) {
         pcmr.push(row['pCMR']);
         phdi.push(row['pHDI']);
     }
-    makePlotG(x,cmr,hdi,pcmr,phdi);
+    makePlotA(x,cmr,hdi,pcmr,phdi);
 }   
 
-function makePlotG(x,cmr,hdi,pcmr,phdi){
+function makePlotA(x,cmr,hdi,pcmr,phdi){
     var traces = [
     {
         name: 'Child Mortality Rate',
@@ -74,7 +74,20 @@ function makePlotG(x,cmr,hdi,pcmr,phdi){
             t: 20,
             b: 50,
             r: 50,
-        }
+        },
+        annotations: [
+            {
+              x: 2001,
+              y: 0,
+              xref: 'x',
+              yref: 'y',
+              text: 'Beginning of War',
+              showarrow: true,
+              arrowhead: 0,
+              ax: 0,
+              ay: -300
+            }
+          ]
     };
 
     var config = {
@@ -82,8 +95,8 @@ function makePlotG(x,cmr,hdi,pcmr,phdi){
         scrollZoom: true,
         displayModeBar: false,
     };
-    console.log('gulf')
-    Plotly.newPlot('gulfWarPlot', traces, layout, config);
+    console.log('afghanistan')
+    Plotly.newPlot('afghanistanWarPlot', traces, layout, config);
 };
 
-loadDataG();
+loadDataA();
