@@ -1,4 +1,4 @@
-const dataSource = "../data/gulf-war-data.csv"
+const dataSource = "../data/gulf-war-data-indexed.csv"
 
 function loadData() {
     Plotly.d3.csv(dataSource, function (data) {
@@ -8,32 +8,40 @@ function loadData() {
   }
 
 function processData(allRows) {
-    let x = [], gdp = [], cmr = [], hdi = [];
+    let x = [], cmr = [], hdi = [], pcmr = [], phdi = [];
     for (let i = 0; i < allRows.length; i++) {
         let row = allRows[i];
-        x.push(row['year']);
-        gdp.push(row['GDP']);
+        x.push(row['Year']);
         cmr.push(row['CMR']);
-        hdi.push(row['HDR']);
+        hdi.push(row['HDI']);
+        pcmr.push(row['pCMR']);
+        phdi.push(row['pHDI']);
     }
-    makePlot(x,gdp,cmr,hdi);
+    makePlot(x,cmr,hdi,pcmr,phdi);
 }   
 
-function makePlot(x,gdp,cmr,hdi){
-    var traces = [{
-        name: 'GDP at Current Prices per Capita ($USD)',
-        x: x,
-        y: gdp
-    },
+function makePlot(x,cmr,hdi,pcmr,phdi){
+    var traces = [
     {
         name: 'Child Mortality Rate',
         x: x,
-        y: cmr
+        y: cmr,
+        connectgaps: true
     },
     {
         name: 'Human Development Index',
         x: x,
         y: hdi
+    },
+    {
+        name: 'Predicted Child Mortality Rate',
+        x: x,
+        y: pcmr
+    },
+    {
+        name: 'Predicted Human Development Index',
+        x: x,
+        y: phdi,
     }];
 
     var layout = {
@@ -43,11 +51,10 @@ function makePlot(x,gdp,cmr,hdi){
             color: 'c4c4c4'
         },
         xaxis: {
-            color: '000000', //learn how to change colour of just title
             title: "Year"
         },
         yaxis: {
-            // title: "Amount of Use"
+            title: "Rate of Change (Indexed to 100)"
         },
         showlegend: false,
         legend: {
@@ -57,16 +64,15 @@ function makePlot(x,gdp,cmr,hdi){
         },
         margin: {
             t: 20,
-            b: 40,
+            b: 50,
             r: 50,
-            l: 50
         }
     };
 
     var config = {
         responsive: true,
         scrollZoom: true,
-        displayModeBar: false
+        displayModeBar: false,
     };
 
     Plotly.newPlot('gulfWarPlot', traces, layout, config);
