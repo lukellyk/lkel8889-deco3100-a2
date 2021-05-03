@@ -36,12 +36,20 @@ function makePlot(x,cmr,hdi,pcmr,phdi){
     {
         name: 'Predicted Child Mortality Rate',
         x: x,
-        y: pcmr
+        y: pcmr,
+        line:{
+            dash: 'dot',
+            color: 'rgb(255,0,0)'
+        }
     },
     {
         name: 'Predicted Human Development Index',
         x: x,
         y: phdi,
+        line:{
+            dash: 'dot',
+            color: 'rgb(255,0,0)'
+        }
     }];
 
     var layout = {
