@@ -1,5 +1,5 @@
-let countries = ['Iraq', 'Afghanistan', 'Kuwait']
-let dumbyData = [1,1,1]
+let countries = ['Iraq', 'Afghanistan', 'Kuwait', 'Timor-Leste', 'Syria', 'Libya', 'Nigeria']
+let dumbyData = [1,1,1,1,1,1,1]
 
 var data = [{
     type: 'choropleth',
@@ -18,6 +18,12 @@ var data = [{
         }
     },
     hovermode: 'closest',
+    hoverlabel: {
+        font: {
+            family: "Bilo",
+            color: 'c4c4c4'
+        },
+    }
 }];
 
 var layout = {
