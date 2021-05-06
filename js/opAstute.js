@@ -1,26 +1,27 @@
-const dataSourceI = "../data/iraq-war-data-indexed.csv"
+const dataSourceOP = "../data/timor-war-data-indexed.csv"
 
-function loadDataI() {
-    Plotly.d3.csv(dataSourceI, function (data) {
+function loadDataOP() {
+    Plotly.d3.csv(dataSourceOP, function (data) {
         console.log(data);
-      processDataI(data);
+      processDataOP(data);
     });
   }
 
-function processDataI(allRows) {
-    let x = [], cmr = [], hdi = [], pcmr = [], phdi = [];
+function processDataOP(allRows) {
+    let x = [], cmr = [], ihdi = [], thdi = [], pcmr = [], phdi = [];
     for (let i = 0; i < allRows.length; i++) {
         let row = allRows[i];
         x.push(row['Year']);
         cmr.push(row['CMR']);
-        hdi.push(row['HDI']);
+        ihdi.push(row['indoHDI']);
+        thdi.push(row['timorHDI']);
         pcmr.push(row['pCMR']);
         phdi.push(row['pHDI']);
     }
-    makePlotI(x,cmr,hdi,pcmr,phdi);
+    makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi);
 }   
 
-function makePlotI(x,cmr,hdi,pcmr,phdi){
+function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
     var traces = [
     {
         name: 'Child Mortality Rate',
@@ -29,9 +30,14 @@ function makePlotI(x,cmr,hdi,pcmr,phdi){
         connectgaps: true
     },
     {
-        name: 'Human Development Index',
+        name: 'Indonesia Human Development Index',
         x: x,
-        y: hdi
+        y: ihdi
+    },
+    {
+        name: 'Timor Leste Human Development Index',
+        x: x,
+        y: thdi
     },
     {
         name: 'Predicted Child Mortality Rate',
@@ -77,7 +83,7 @@ function makePlotI(x,cmr,hdi,pcmr,phdi){
         },
         annotations: [
             {
-              x: 2003,
+              x: 2006,
               y: 0,
               xref: 'x',
               yref: 'y',
@@ -85,10 +91,10 @@ function makePlotI(x,cmr,hdi,pcmr,phdi){
               showarrow: true,
               arrowhead: 0,
               ax: 0,
-              ay: -350
+              ay: -300
             },
             {
-                x: 2009,
+                x: 2013,
                 y: 0,
                 xref: 'x',
                 yref: 'y',
@@ -96,7 +102,7 @@ function makePlotI(x,cmr,hdi,pcmr,phdi){
                 showarrow: true,
                 arrowhead: 0,
                 ax: 0,
-                ay: -370
+                ay: -320
               }
           ]
     };
@@ -106,8 +112,8 @@ function makePlotI(x,cmr,hdi,pcmr,phdi){
         scrollZoom: true,
         displayModeBar: false,
     };
-    console.log('iraq')
-    Plotly.newPlot('iraqWarPlot', traces, layout, config);
+    console.log('astute')
+    Plotly.newPlot('opAstutePlot', traces, layout, config);
 };
 
-loadDataI();
+loadDataOP();
