@@ -24,23 +24,23 @@ function processDataOP(allRows) {
 function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
     var traces = [
     {
-        name: 'Child Mortality Rate',
+        name: 'CMR',
         x: x,
         y: cmr,
         connectgaps: true
     },
     {
-        name: 'Indonesia Human Development Index',
+        name: 'Indonesia HDI',
         x: x,
         y: ihdi
     },
     {
-        name: 'Timor Leste Human Development Index',
+        name: 'Timor Leste HDI',
         x: x,
         y: thdi
     },
     {
-        name: 'Predicted Child Mortality Rate',
+        name: 'Predicted CMR',
         x: x,
         y: pcmr,
         line:{
@@ -49,7 +49,7 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
         }
     },
     {
-        name: 'Predicted Human Development Index',
+        name: 'Predicted HDI',
         x: x,
         y: phdi,
         line:{
@@ -104,7 +104,14 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
                 ax: 0,
                 ay: -320
               }
-          ]
+          ],
+          hoverlabel: {
+            font: {
+                family: "Bilo",
+                color: "#ffffff"
+            },
+            bordercolor: "rgba(255, 255, 255, 0)"
+        }
     };
 
     var config = {

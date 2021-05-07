@@ -23,18 +23,18 @@ function processDataIS(allRows) {
 function makePlotIS(x,cmr,hdi,pcmr,phdi){
     var traces = [
     {
-        name: 'Child Mortality Rate',
+        name: 'CMR',
         x: x,
         y: cmr,
         connectgaps: true
     },
     {
-        name: 'Human Development Index',
+        name: 'HDI',
         x: x,
         y: hdi
     },
     {
-        name: 'Predicted Child Mortality Rate',
+        name: 'Predicted CMR',
         x: x,
         y: pcmr,
         line:{
@@ -43,7 +43,7 @@ function makePlotIS(x,cmr,hdi,pcmr,phdi){
         }
     },
     {
-        name: 'Predicted Human Development Index',
+        name: 'Predicted HDI',
         x: x,
         y: phdi,
         line:{
@@ -87,7 +87,14 @@ function makePlotIS(x,cmr,hdi,pcmr,phdi){
               ax: 0,
               ay: -330
             }
-          ]
+          ],
+          hoverlabel: {
+            font: {
+                family: "Bilo",
+                color: "#ffffff"
+            },
+            bordercolor: "rgba(255, 255, 255, 0)"
+        }
     };
 
     var config = {

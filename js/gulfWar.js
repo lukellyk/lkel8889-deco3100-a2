@@ -23,18 +23,18 @@ function processDataG(allRows) {
 function makePlotG(x,cmr,hdi,pcmr,phdi){
     var traces = [
     {
-        name: 'Child Mortality Rate',
+        name: 'CMR',
         x: x,
         y: cmr,
         connectgaps: true
     },
     {
-        name: 'Human Development Index',
+        name: 'HDI',
         x: x,
         y: hdi
     },
     {
-        name: 'Predicted Child Mortality Rate',
+        name: 'Predicted CMR',
         x: x,
         y: pcmr,
         line:{
@@ -43,7 +43,7 @@ function makePlotG(x,cmr,hdi,pcmr,phdi){
         }
     },
     {
-        name: 'Predicted Human Development Index',
+        name: 'Predicted HDI',
         x: x,
         y: phdi,
         line:{
@@ -59,7 +59,7 @@ function makePlotG(x,cmr,hdi,pcmr,phdi){
             color: 'c4c4c4'
         },
         xaxis: {
-            title: "Year"
+            title: "Year",
         },
         yaxis: {
             title: "Rate of Change (Indexed to 100)",
@@ -74,6 +74,26 @@ function makePlotG(x,cmr,hdi,pcmr,phdi){
             t: 20,
             b: 50,
             r: 50,
+        },
+        annotations: [
+            {
+                x: 1991,
+                y: 0,
+                xref: 'x',
+                yref: 'y',
+                text: 'End of War',
+                showarrow: true,
+                arrowhead: 0,
+                ax: 0,
+                ay: -370
+              }
+          ],
+        hoverlabel: {
+            font: {
+                family: "Bilo",
+                color: "#ffffff"
+            },
+            bordercolor: "rgba(255, 255, 255, 0)"
         }
     };
 
