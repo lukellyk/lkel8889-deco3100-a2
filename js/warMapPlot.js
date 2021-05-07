@@ -1,5 +1,5 @@
-let countries = ['Iraq', 'Afghanistan', 'Kuwait', 'Timor-Leste', 'Syria', 'Libya', 'Nigeria']
-let dumbyData = [1,1,1,1,1,1,1]
+let countries = ['Iraq', 'Afghanistan', 'Kuwait', 'Timor-Leste', 'Syria']
+let dumbyData = [1,1,1,1,1]
 
 var data = [{
     type: 'choropleth',
