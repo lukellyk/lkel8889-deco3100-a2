@@ -1,4 +1,4 @@
-const dataSourceA = "../data/afghanistan-war-data-indexed.csv"
+const dataSourceA = "https://raw.githubusercontent.com/lukellyk/lkel8889-deco3100-a2/master/data/afghanistan-war-data-indexed.csv"
 
 function loadDataA() {
     Plotly.d3.csv(dataSourceA, function (data) {
