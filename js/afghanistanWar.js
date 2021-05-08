@@ -62,7 +62,7 @@ function makePlotA(x,cmr,hdi,pcmr,phdi){
             title: "Year"
         },
         yaxis: {
-            title: "Rate of Change (Indexed to 100)",
+            title: "CMR and HDI (Indexed to 100)",
         },
         showlegend: false,
         legend: {
