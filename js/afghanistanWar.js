@@ -59,10 +59,16 @@ function makePlotA(x,cmr,hdi,pcmr,phdi){
             color: 'c4c4c4'
         },
         xaxis: {
-            title: "Year"
+            title: "Year",
+            titlefont: {
+                color: '000000'
+            },
         },
         yaxis: {
             title: "CMR and HDI (Indexed to 100)",
+            titlefont: {
+                color: '000000'
+            },
         },
         showlegend: false,
         legend: {
