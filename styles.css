@@ -73,6 +73,11 @@ fine-print {
     align-items: center;
 }
 
+li{
+    font-family: p22-mackinac-pro, serif;
+    padding-bottom: 1em;
+}
+
 .link{
     text-decoration: none;
     font-family: p22-mackinac-pro, serif;}

@@ -86,7 +86,18 @@ function makePlotA(x,cmr,hdi,pcmr,phdi){
               arrowhead: 0,
               ax: 0,
               ay: -300
-            }
+            },
+            {
+                x: 2021,
+                y: 0,
+                xref: 'x',
+                yref: 'y',
+                text: 'Australian Withdrawal from War',
+                showarrow: true,
+                arrowhead: 0,
+                ax: 0,
+                ay: -350
+              }
           ],
           hoverlabel: {
             font: {
