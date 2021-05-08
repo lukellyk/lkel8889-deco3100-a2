@@ -1,4 +1,4 @@
-const dataSourceOP = "../data/timor-war-data-indexed.csv"
+const dataSourceOP = "https://raw.githubusercontent.com/lukellyk/lkel8889-deco3100-a2/master/data/timor-war-data-indexed.csv"
 
 function loadDataOP() {
     Plotly.d3.csv(dataSourceOP, function (data) {
