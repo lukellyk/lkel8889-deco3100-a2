@@ -51,24 +51,23 @@ h1 {
     font-weight: 700;
     font-style: normal;;
     font-size: 3em;
-    font-family: freight-text-pro,serif;
+    font-family: p22-mackinac-pro, serif;
 }
 
 h2 {
     font-size: 2em;
-    font-family: 'Bilo', sans-serif;
-}
+    font-family: p22-mackinac-pro, serif;}
 
 p {
     font-size: 1.15em;
     font-weight: 400;
-    font-style: normal;
+    font-family: p22-mackinac-pro, serif;
 }
 
 fine-print {
     font-size: 0.75em;
     color: #c4c4c4;
-    font-family: 'Bilo', sans-serif;
+    font-family: p22-mackinac-pro, serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +75,7 @@ fine-print {
 
 .link{
     text-decoration: none;
-    font-family: 'Bilo', sans-serif;
-}
+    font-family: p22-mackinac-pro, serif;}
 
 .modebar {
     display: none !important;
