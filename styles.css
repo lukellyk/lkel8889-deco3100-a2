@@ -1,7 +1,9 @@
+/* define default text colour */
 body{
     color: #292929;
 }
 
+/* define flex properties */
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -11,43 +13,50 @@ body{
     align-items: stretch;
     height: 100%;
     min-height: 100vh;
-    }
+}
 
+/* set up empty flex boxes on either side of text */
 .flex-item:nth-child(1), .flex-item:nth-child(3) {
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
     width: 25%;
-    }
+}
 
+/* set up middle flex box which houses all content */
 .flex-item:nth-child(2) {
     order: 0;
     flex: 1 1 auto;
     max-width: 800px;
-    }
+}
 
+/* set up box that holds title, subtitle and pers info */
 .box {
-    box-shadow: 5px 10px 50px #c4c4c4;
-    border-radius: 25px;
+    box-shadow: 5px 10px 50px #c4c4c4; /* to make it stand our of page and define hierarchy */
+    border-radius: 25px; /* round corners to provide a softer, cleaner and less harsh look */
     padding: 20px 50px 20px 50px;
     height: 100%;
     width: auto;
 }
 
 .graph-box{
-    border-radius: 25px;
-    box-shadow: 5px 10px 50px #c4c4c4;
+    border-radius: 25px; /* round corners to provide a softer, cleaner and less harsh look */
+    box-shadow: 5px 10px 50px #c4c4c4; /* provides clear break between each section when moving onto next war and adds depth to readin experience */
     height: 100%;
     padding: 10px 10px 10px 10px;
     max-width: 38vw;
 }
 
+/* ensures graph remains in centre of box */
 .graph-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* the font 'P22 Mackinac Pro' was chosen due to it being effective as a title font when bolded but also remaining completely legible for body text */
+
+/* used for main title */
 h1 {
     font-weight: 700;
     font-style: normal;;
@@ -55,16 +64,20 @@ h1 {
     font-family: p22-mackinac-pro, serif;
 }
 
+/* used for section titles */
 h2 {
     font-size: 2em;
-    font-family: p22-mackinac-pro, serif;}
+    font-family: p22-mackinac-pro, serif;
+}
 
+/* used for body text */
 p {
     font-size: 1.15em;
     font-weight: 400;
     font-family: p22-mackinac-pro, serif;
 }
 
+/* used to add footnotes */
 fine-print {
     font-size: 0.75em;
     color: #c4c4c4;
@@ -75,15 +88,20 @@ fine-print {
     text-align: center;
 }
 
-li{
+/* used for bibliography */
+li {
     font-family: p22-mackinac-pro, serif;
     padding-bottom: 1em;
 }
 
+/* used for hyperlinks */
+/* removes default underline for a cleaner and less invasive look */
 .link{
     text-decoration: none;
-    font-family: p22-mackinac-pro, serif;}
+    font-family: p22-mackinac-pro, serif;
+}
 
+/* hide toolbar as it is not seen as important */
 .modebar {
     display: none !important;
 }
