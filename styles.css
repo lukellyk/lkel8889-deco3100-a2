@@ -39,6 +39,7 @@ body{
     box-shadow: 5px 10px 50px #c4c4c4;
     height: 100%;
     padding: 10px 10px 10px 10px;
+    max-width: 38vw;
 }
 
 .graph-container {

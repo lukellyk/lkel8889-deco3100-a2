@@ -59,6 +59,12 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
     }];
 
     var layout = {
+        title: {
+            text: "Timor-Leste's HDI & CMR since 1990",
+            font: {
+                family: 'p22-mackinac-pro'
+            }
+        },
         font: {
             size: 18,
             family: "Bilo",
@@ -83,7 +89,7 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
             y: 0.9
         },
         margin: {
-            t: 20,
+            t: 50,
             b: 50,
             r: 50,
         },
@@ -108,7 +114,7 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
                 showarrow: true,
                 arrowhead: 0,
                 ax: 0,
-                ay: -320
+                ay: -280
               },
               {
                 x: 2000,
@@ -119,7 +125,7 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
                 showarrow: true,
                 arrowhead: 0,
                 ax: 0,
-                ay: -320
+                ay: -280
               }
           ],
           hoverlabel: {

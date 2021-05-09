@@ -53,6 +53,12 @@ function makePlotIS(x,cmr,hdi,pcmr,phdi){
     }];
 
     var layout = {
+        title: {
+            text: "Syria's HDI & CMR since 1990",
+            font: {
+                family: 'p22-mackinac-pro'
+            }
+        },
         font: {
             size: 18,
             family: "Bilo",
@@ -77,7 +83,7 @@ function makePlotIS(x,cmr,hdi,pcmr,phdi){
             y: 0.9
         },
         margin: {
-            t: 20,
+            t: 50,
             b: 50,
             r: 50,
         },
@@ -91,7 +97,7 @@ function makePlotIS(x,cmr,hdi,pcmr,phdi){
               showarrow: true,
               arrowhead: 0,
               ax: 0,
-              ay: -330
+              ay: -315
             }
           ],
           hoverlabel: {
