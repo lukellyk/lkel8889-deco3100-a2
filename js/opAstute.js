@@ -109,6 +109,17 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
                 arrowhead: 0,
                 ax: 0,
                 ay: -320
+              },
+              {
+                x: 2000,
+                y: 0,
+                xref: 'x',
+                yref: 'y',
+                text: 'Sep. from Indo. *',
+                showarrow: true,
+                arrowhead: 0,
+                ax: 0,
+                ay: -320
               }
           ],
           hoverlabel: {
@@ -116,7 +127,8 @@ function makePlotOP(x,cmr,ihdi,thdi,pcmr,phdi){
                 family: "Bilo",
                 color: "#ffffff"
             },
-            bordercolor: "rgba(255, 255, 255, 0)"
+            bordercolor: "rgba(255, 255, 255, 0)",
+            namelength: 20
         }
     };
 
