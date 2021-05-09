@@ -1,3 +1,6 @@
+//js is almost identical to other graphs
+//refer to afghanistanWar.js for comments
+
 const dataSourceI = "https://raw.githubusercontent.com/lukellyk/lkel8889-deco3100-a2/master/data/iraq-war-data-indexed.csv"
 
 function loadDataI() {
