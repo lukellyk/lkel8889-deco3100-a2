@@ -58,5 +58,10 @@ var layout = {
     plot_bgcolor: 'rgba(0,0,0,0)'
 };
 
+var config = {
+    responsive: true,
+    scrollZoom: true,
+};
+
 // push map to DOM
-Plotly.newPlot("warMapPlot", data, layout);
+Plotly.newPlot("warMapPlot", data, layout, config);
