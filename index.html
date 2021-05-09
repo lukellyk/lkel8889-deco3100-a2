@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!-- importing plotly library -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script> 
+    <!-- importing styles as well as fonts from adobe fonts -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/qzj4ibo.css">
+    <!-- setting favicon and site title -->
     <link rel="icon" type="image/png" href="img/favicon.png"/>
     <title>Australia's Military Involvements and their Effects on Incoming Generations</title>
 </head>
 <body>
+    <!-- setting up flex container on each side of the column of graphs and text -->
     <div class="flex-container">
         <div class="flex-item"></div>
         <div class="flex-item">
             <div>
+                <!-- box with title, subtitle and my info -->
                 <div class = "box">
                     <h1 style="margin-top: 0px;">Australia's Military Involvements and their Effects on Incoming Generations.</h1>
                     <p style="font-size: 1.5em; color: #757575; font-style: italic;">How does war affect their mortality and the future of their country?</p>
@@ -23,6 +28,7 @@
                         By <a href="https://lukekel.ly" target="_blank" class="link">Luke Kelly</a> <a style="color: #757575;">| B. DesComp @ USyd '21</a>
                     </p>
                 </div>
+                <!-- chloropleth map showing map of australia's military involvements -->
                 <div class="graph-container" style="padding-top: 60px;">
                     <div class="graph-box">
                         <div id='warMapPlot'></div>
@@ -30,6 +36,7 @@
                         <fine-print style="padding-top:10px;padding-bottom: 10px;padding-left: 180px;padding-right: 180px;">A map of the locations of Australia's war involvments since 1990</fine-print>
                     </div>
                 </div>
+                <!-- introduction paragraph -->
                 <h2>Introduction</h2>
                 <p>
                     Since 1990,  Australia has been a participant in a multitude of conflicts overseas with many still ongoing. These wars have shaped and changed religions, races, governments, borders and even entire countries. This analysis aims to visualise the impacts of these conflicts on the future generation of these countries with regard to the Child Mortality Rates (<b>CMR</b>) as well as the <a href="https://ourworldindata.org/human-development-index#how-is-the-human-development-index-calculated" target="_blank" class="link" style="font-family: p22-mackinac-pro, serif;">Human Development Index</a> (<b>HDI</b>) developed by the UN.
@@ -39,6 +46,7 @@
                 <h2>The Gulf War - 1990</h2>
                 <div class="graph-container">
                     <div class="graph-box">
+                        <!-- display graph about gulf war -->
                         <div id='gulfWarPlot'></div>
                         <script src='js/gulfWar.js'></script>
                     </div>
@@ -50,6 +58,7 @@
                 <h2>War in Afghanistan (2001 - present)</h2>
                 <div class="graph-container">
                     <div class="graph-box">
+                        <!-- display graph about afghanistan war -->
                         <div id='afghanistanWarPlot'></div>
                         <script src='js/afghanistanWar.js'></script>
                     </div>
@@ -61,6 +70,7 @@
                 <h2>Iraq War (2003 - 2009)</h2>
                 <div class="graph-container">
                     <div class="graph-box">
+                        <!-- display graph about iraq war -->
                         <div id='iraqWarPlot'></div>
                         <script src='js/iraqWar.js'></script>
                     </div>
@@ -68,12 +78,11 @@
                 <br>
                 <p>
                     Based upon the worry of Iraq harbouring weapons of mass destruction (Later proven to be falsely informed) and their brutal leader, Suddam Hussein, the US, Australia, the UK and a number of other allied forces staged a ‘shock and awe’ bombing campaign to make their presence known and begin the war against Iraq. Many have criticised Australia’s involvement in the war labeling them as a ‘lapdog’ of the United States, when in reality they are more of a ‘hound dog’, advocating heavily on the global stage for the need for a war and then making a relatively modest commitment of 2000 soldiers when compared to America’s 45,000 (Cox & O'Connor, 2012).<br><br>As is consistent with previous infographics, the presented graph shows little-to-no impact on <b>Iraq’s</b> Child Mortality Rate as well their Human Development Index. Notably, their HDI dropped by a factor of 2% when the war began but then recovered almost immediately. This can be attributed to the fall of the Saddam dynasty and their control on the state, opening a new chapter. Additionally, CMR falls in accordance with the west’s invasion bringing modern medicine, constructing hospitals and providing education to the people, an often overlooked aspect of war.<br><br>Finally, trends since the war predict that the country will continue to prosper and state their place as a powerful entity in the global community.
-                     
-
                 </p>
                 <h2>Operation Astute (2006 - 2013)</h2>
                 <div class="graph-container">
                     <div class="graph-box">
+                        <!-- display graph about op astute -->
                         <div id='opAstutePlot'></div>
                         <script src='js/opAstute.js'></script>
                         <fine-print style="padding-top:10px;padding-bottom: 10px;padding-left: 180px;padding-right: 180px;">*the break in the orange and green line on the x axis shows the separation of Timor-Leste as its own state from Indonesia</fine-print>
@@ -82,11 +91,11 @@
                 <br>
                 <p>
                     OP Astute was an Australian-led operation which formed as a response to unrest during the 2006 <b>East Timor</b> Crisis relating to discrimination within the military. It was requested by the East Timor Government following a failed coup attempt and general uncontrolled violence around the country. They’re four main tasks consisted of; allowing the safe evacuation of foreigners, restoring stability and confining conflict to secure areas, assessing and locating the weapons possessed by conflicting military groups and establishing a safe environment for dialogue to resolve the crisis. After the show of force and relatively little outward violence by the assorted militaries and police units over the course of many years the country was stabilised.<br><br>The graph shows that, despite a small plateau at the peak of the engagement, the conflict within East Timor had little effect on the growth of their country and the mortality of their children. This could be attributed to a large UN and World Vision presence providing aid as well as serious growth in their economy as a result of their dependence on their oil and gas reserves (UN, 2018). This dependence is also a direct contributor to the country’s downturn seen in the HDI as, despite commendable efforts from the government to delink trends in the petroleum sector from short term economic performance, sharp falls in the price of petroleum have had great effects on the economy.<br><br>As can be seen in recent trends and through the predictions, the country has recovered from their fall, which was not a direct result of Operation Astute, and are developing and promoting new sectors such as tourism and revitalising old sectors such as agriculture in order to promote a healthier and more sustainable growth model.
-
                 </p>
                 <h2>War on ISIL (2014 - present)</h2>
                 <div class="graph-container">
                     <div class="graph-box">
+                        <!-- display graph about war on isil -->
                         <div id='isilWarPlot'></div>
                         <script src='js/isilWar.js'></script>
                     </div>
@@ -94,12 +103,12 @@
                 <br>
                 <p>
                     Although the war against the Islamic State of Iraq and the Levant (ISIL) ranges across multiple countries including Iraq, Libya, Nigeria and Afghanistan; Australia’s involvement relates only to Syria. This war started as a result of the US’ support of Iranian soldiers who were fighting the insurgents in Iraq and after a brief period of time the war expanded into neighbouring countries and had to employ the use of airstrikes to control the expansion. In 2017, ISIL were said to be defeated in Iraq followed in 2019 by their territorial defeat in Syria, leaving only 10,000 fighters left (Lederer, 2020).<br><br>As can be seen in the infographic, the introduction of the dangerously idealistic ISIL into Syria caused a drastic downturn in the country’s HDI and a clear increase in their CMR. This trend has not been observed in data since 1990 in relation to Australia’s other warfare engagements. ISIL’s grip on the country of Syria was so tight that it was observed that there was a 61% reduction in electricity consumption across the country, along with a 23% reduction in GDP and 36% reduction in population of cities under their control (Robinson et al., 2017). All of these aspects combined form a strong conclusion and reasoning negative turns on CMR and HDI, with schooling, access to health care, access to clean drinking water and opportunities to make an income becoming more and more scarce as the Islamic State progressed.<br><br>Thankfully, through the strong show of force by the allied forces against the rebels inhabiting the Middle East, a positive change seems to be on the horizon for Syria. Although this has not yet been reflected in the actual data with regard to CMR, the prediction shows a return to the sharp decrease seen between 1990 and 2005.
-
                 </p>
                 <h2>Conclusion</h2>
                 <p>
                     In conclusion, this data is pretty epic don't you think?
                 </p>
+                <!-- referencing displayed as a list -->
                 <h2>References</h2>
                 <ul>
                     <li>Council on Foreign Relations. (n.d.). The Iraq war. Retrieved May 01, 2021, from https://www.cfr.org/timeline/iraq-war</li>
@@ -114,6 +123,7 @@
                 </ul>
             </div>
             <div style="padding-top: 50px;">
+                <!-- cute message bc i'm a relateable and fun developer -->
                 <fine-print>Made with ❤️ by Luke Kelly in 2021</fine-print>
             </div>
         </div>
